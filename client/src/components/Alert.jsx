@@ -1,12 +1,5 @@
 import { X } from "lucide-react";
-import type { AlertType } from "../App";
-
-interface AlertProps {
-  alerts: AlertType[];
-  removeAlert: (id: string) => void;
-}
-
-export default function Alert({ alerts, removeAlert }: AlertProps) {
+export default function Alert({ alerts, removeAlert }) {
   if (alerts.length === 0) return null;
 
   return (

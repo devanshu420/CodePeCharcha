@@ -14,12 +14,6 @@ import Navbar from "@/components/Navbar";
 import Alert from "@/components/Alert";
 import Footer from "@/components/Footer";
 
-export interface AlertType {
-  id: string;
-  message: string;
-  type: 'success' | 'error';
-}
-
 function Router() {
   return (
     <Switch>
@@ -34,9 +28,9 @@ function Router() {
 }
 
 function App() {
-  const [alerts, setAlerts] = useState<AlertType[]>([]);
+  const [alerts, setAlerts] = useState([]);
 
-  const showAlert = (message: string, type: 'success' | 'error' = 'success') => {
+  const showAlert = (message, type = 'success') => {
     const id = Date.now().toString();
     const newAlert = { id, message, type };
     setAlerts(prev => [...prev, newAlert]);
@@ -46,7 +40,7 @@ function App() {
     }, 5000);
   };
 
-  const removeAlert = (id: string) => {
+  const removeAlert = (id) => {
     setAlerts(prev => prev.filter(alert => alert.id !== id));
   };
 

@@ -6,7 +6,7 @@ export default function Home() {
   const [, setLocation] = useLocation();
   const [email, setEmail] = useState("");
 
-  const handleSubscribe = (e: React.FormEvent) => {
+  const handleSubscribe = (e) => {
     e.preventDefault();
     if (email) {
       // showAlert('Subscribed successfully! 📨 Welcome to CodePeCharcha family!', 'success');

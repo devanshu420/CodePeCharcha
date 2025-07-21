@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { useLocation } from "wouter";
-import { courses, Course } from "../data/courses";
+import { courses } from "../data/courses";
 
 export default function Courses() {
   const [, setLocation] = useLocation();
-  const [activeFilter, setActiveFilter] = useState<string>('all');
+  const [activeFilter, setActiveFilter] = useState('all');
 
   const filters = [
     { key: 'all', label: 'All' },
@@ -17,7 +17,7 @@ export default function Courses() {
     ? courses 
     : courses.filter(course => course.category === activeFilter);
 
-  const handleCourseClick = (courseId: string) => {
+  const handleCourseClick = (courseId) => {
     setLocation(`/product/${courseId}`);
   };
 

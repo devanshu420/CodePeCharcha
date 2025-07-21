@@ -3,12 +3,12 @@ import { Instagram, Github, Linkedin, Mail, Heart, Code } from "lucide-react";
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
-  const handleSocialClick = (platform: string) => {
+  const handleSocialClick = (platform) => {
     // Mock social media links - would be replaced with real links
     alert(`${platform} link - Coming soon! 🚀`);
   };
 
-  const handleNewsletterSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleNewsletterSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const email = formData.get('email');

@@ -21,7 +21,7 @@ export default function Auth() {
     confirmPassword: ''
   });
 
-  const handleLoginSubmit = (e: React.FormEvent) => {
+  const handleLoginSubmit = (e) => {
     e.preventDefault();
     // Dummy authentication logic
     if (loginForm.email && loginForm.password) {
@@ -32,7 +32,7 @@ export default function Auth() {
     }
   };
 
-  const handleSignupSubmit = (e: React.FormEvent) => {
+  const handleSignupSubmit = (e) => {
     e.preventDefault();
     // Dummy registration logic
     if (signupForm.firstName && signupForm.lastName && signupForm.email && 
@@ -58,7 +58,7 @@ export default function Auth() {
     }
   };
 
-  const handleSocialLogin = (provider: string) => {
+  const handleSocialLogin = (provider) => {
     alert(`${provider} login feature coming soon! 🚀`);
   };
 

@@ -2,11 +2,7 @@ import { useLocation } from "wouter";
 import { useState } from "react";
 import { Menu, X, Code } from "lucide-react";
 
-interface NavbarProps {
-  showAlert: (message: string, type?: 'success' | 'error') => void;
-}
-
-export default function Navbar({ showAlert }: NavbarProps) {
+export default function Navbar({ showAlert }) {
   const [location, setLocation] = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -17,7 +13,7 @@ export default function Navbar({ showAlert }: NavbarProps) {
     { path: "/auth", label: "Login", isButton: true }
   ];
 
-  const handleNavClick = (path: string) => {
+  const handleNavClick = (path) => {
     setLocation(path);
     setIsMobileMenuOpen(false);
   };

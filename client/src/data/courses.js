@@ -1,18 +1,4 @@
-export interface Course {
-  id: string;
-  title: string;
-  description: string;
-  fullDescription: string;
-  price: string;
-  duration: string;
-  category: 'courses' | 'internship' | 'merch';
-  emoji: string;
-  image: string;
-  badgeColor: string;
-  features: string[];
-}
-
-export const courses: Course[] = [
+export const courses = [
   {
     id: 'frontend-mastery',
     title: 'Frontend Mastery',
