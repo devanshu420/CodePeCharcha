@@ -12,6 +12,7 @@ import About from "@/pages/About";
 import Auth from "@/pages/Auth";
 import Navbar from "@/components/Navbar";
 import Alert from "@/components/Alert";
+import Footer from "@/components/Footer";
 
 export interface AlertType {
   id: string;
@@ -55,6 +56,7 @@ function App() {
         <div className="min-h-screen bg-gray-900 text-white">
           <Navbar showAlert={showAlert} />
           <Router />
+          <Footer />
           <Alert alerts={alerts} removeAlert={removeAlert} />
         </div>
         <Toaster />
